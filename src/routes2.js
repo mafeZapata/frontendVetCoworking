@@ -25,6 +25,7 @@ import actualizarControlParto from "./views/pages/actualizarControlParto";
 import controlPartos from "./views/pages/controlPartos";
 
 
+
 var routes2 = [
     {
         path: "/produccionLechera",
@@ -175,6 +176,6 @@ var routes2 = [
         component: Register,
         layout: "/auth",
     },
-
+    
 ];
 export default routes2;

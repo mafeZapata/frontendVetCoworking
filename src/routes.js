@@ -13,7 +13,9 @@ import Register from "../src/views/pages/Register.js";
 import controlPreñez from "../src/views/pages/controlPreñez.js";
 import Lecherias from "../src/views/pages/Lecherias.js";
 
+
 var routes = [
+  
   {
     path: "/Bovinos",
     name: "VetCoworking",
@@ -96,6 +98,7 @@ var routes = [
     component: Login,
     layout: "/auth",
   },
+ 
   {
     path: "/register",
     component: Register,

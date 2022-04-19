@@ -54,7 +54,7 @@ const Auth = (props) => {
           </Container>
           <div className="separator separator-bottom separator-skew zindex-100">
               <polygon
-                className="fill-success"
+                className="fill-info"
                 points="2060 0 2060 100 0 100"
               />
           </div>
