@@ -12,7 +12,7 @@ import { Button, Card, CardBody, CardTitle, Container, Row, Col } from "reactstr
 const Header = () => {
   return (
     <>
-      <div className="header bg-gradient-success pb-9 pt-5 pt-md-8">
+      <div className="header bg-gradient-info pb-9 pt-5 pt-md-8">
         <Container fluid>
         <Col lg="7" md="10">
               <h1 className="display-2 text-white">Inventario de Bovinos</h1>
@@ -252,12 +252,12 @@ const Header = () => {
           <br/>
           <div className="text-left">
               <Button
-                className="btn-neutral btn-icon mr-6"
-                color="info"
-                to="/admin/insertarBovino" tag={Link}
+                className ="btn-white btn-icon mr-6"
+                color = 'danger' 
+                to ="/admin/insertarBovino" tag={Link}
               >
                  <i className="ni ni-fat-add" />
-                <span className="btn-inner--text">Añadir Nuevo Bovino</span>
+                <span className="btn-inner--text" >Añadir Nuevo Bovino</span>
               </Button>           
             </div>
         </Container>

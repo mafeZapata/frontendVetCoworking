@@ -16,8 +16,8 @@ import Lecherias from "../src/views/pages/Lecherias.js";
 var routes = [
   {
     path: "/Bovinos",
-    name: "Bovinos",
-    icon: "ni ni-world text-success",
+    name: "VetCoworking",
+    icon: "ni ni-world text-info",
     component: Bovinos,
     layout: "/admin",
   },

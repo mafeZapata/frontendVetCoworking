@@ -9,9 +9,9 @@ const Auth = (props) => {
   const location = useLocation();
 
   React.useEffect(() => {
-    document.body.classList.add("bg-success");
+    document.body.classList.add("bg-info");
     return () => {
-      document.body.classList.remove("bg-success");
+      document.body.classList.remove("bg-info");
     };
   }, []);
   React.useEffect(() => {

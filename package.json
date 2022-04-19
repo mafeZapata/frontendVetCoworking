@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Josewp10/vache-client"
+    "url": "git+https://github.com/Josewp10/vache-client.git"
   },
   "keywords": [
     "react",
@@ -17,12 +17,12 @@
     "argon-dashboard",
     "argon-dashboard-react"
   ],
-  "author": "Team developers VACHE(Alvarez Alejandra, Arrroyave Juan Jose,Marulanda José,Pastrana Camilo,Zapata Maria Fernanda",
+  "author": "Team developers VACHE",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Josewp10/vache-client"
   },
-  "homepage": ".",
+  "homepage": "http://.",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -63,7 +63,10 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.1",
-    "reactstrap": "8.9.0"
+    "reactstrap": "8.9.0",
+    "eslint-plugin-flowtype": "5.2.0",
+    "jquery": "3.5.1",
+    "typescript": "4.1.3"
   },
   "devDependencies": {
     "gulp": "4.0.2",
