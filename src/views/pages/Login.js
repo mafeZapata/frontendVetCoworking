@@ -52,7 +52,7 @@ const Login = () => {
                 <small>¿ Olvidaste tu contraseña ?</small>
               </FormGroup>
               <div className="text-center">
-                <Link to={'/admin/Bovinos'}>
+                <Link to={'/admin/inicio'}>
                   <Button className="my-4" color="info" type="button">
                     Iniciar Sesión
                 </Button>

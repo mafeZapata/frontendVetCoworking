@@ -7,7 +7,7 @@ import {
 // core components
 import Header from "../../components/Headers/Header.js";
 
-const Bovinos = () => {
+const inicio = () => {
   return (
     <>
       <Header />
@@ -20,4 +20,4 @@ const Bovinos = () => {
   );
 };
 
-export default Bovinos;
+export default inicio;

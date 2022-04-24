@@ -34,7 +34,7 @@ const Header = () => {
                           >
                             Reserva de consultorios
                         </CardTitle>
-                        <img src={imagenes.clientes} alt="Clientes" style = {{ height:150, width: 150,}}/>
+                        <img src={imagenes.reserva} alt="Reservas" style = {{ height:150, width: 150,}}/>
                         { /* </div>
                        <Col className="col-auto">
                           <div className="icon icon-shape bg-info text-white rounded-circle shadow">
@@ -67,33 +67,6 @@ const Header = () => {
                       <Col className="col-auto">
                         <div className="icon icon-shape bg-success text-white rounded-circle shadow">
                           <i className="fas fa-chart-bar" />
-                        </div>
-                      </Col>*/}
-                      </div>
-                    </Row>
-                  </CardBody>
-                  </Link>
-                  </Button>
-                </Card>
-              </Col>
-              <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
-                <Button>
-                    <Link to={'/admin/novillonas'}>
-                  <CardBody>
-                    <Row>
-                      <div className="col">
-                        <CardTitle
-                          tag="h5"
-                          className="text-uppercase text-muted mb-0"
-                        >
-                          Reservaciones
-                        </CardTitle>
-                        <img src={imagenes.clientes} alt="Clientes" style = {{ height:150, width: 150,}}/>
-                      {/* </div>
-                      <Col className="col-auto">
-                        <div className="icon icon-shape bg-success text-white rounded-circle shadow">
-                          <i className="fas fa-file-medical-alt" />
                         </div>
                       </Col>*/}
                       </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Container, Row, Col, Button } from "reactstrap";
 
-const Termos = () => {
+const Reservas = () => {
   return (
     <>
       <div
@@ -12,28 +12,28 @@ const Termos = () => {
           minHeight: "400px",
           backgroundImage:
             "url(" +
-            require("../../assets/img/theme/termos.jpg").default +
+            require("../../assets/img/theme/terneraslevante.jpeg").default +
             ")",
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}
       >
-         {/* Mask */}
-         <span className="mask bg-gradient-gray opacity-8" />
+        {/* Mask */}
+        <span className="mask bg-gradient-success opacity-8" />
         {/* Header container */}
         <Container className="d-flex align-items-center" fluid>
           <Row>
             <Col lg="7" md="10">
-            <div className="text-left">
+              <div className="text-left">
                 <Button
-                  className="btn-black btn-icon mr-2"
-                  color="black"
+                  className="btn-neutral btn-icon mr-2"
+                  color="info"
                   to="/admin/bovinos" tag={Link}
                 >
                   <i className="ni ni-bold-left" />
                 </Button>
               </div>
-              <h1 className="display-2 text-white">Termos</h1>
+              <h1 className="display-2 text-white">Terneras</h1>
             </Col>
           </Row>
         </Container>
@@ -42,4 +42,4 @@ const Termos = () => {
   );
 };
 
-export default Termos;
+export default Reservas;

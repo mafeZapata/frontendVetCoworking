@@ -2,6 +2,7 @@
 import React from "react";
 import axios from "axios";
 
+
 import {
   Card,
   DropdownMenu,
@@ -11,17 +12,16 @@ import {
   Table,
   Container,
   Row,
-  Button,
 } from "reactstrap";
 
 
-import TorosHeader from "../../components/Headers/Toros.js";
-export default class Toros extends React.Component {
+import TernerasHeader from "../../components/Headers/Reservas.js";
+export default class Terneras extends React.Component {
 
 
   state = {
-    listaToros: [],
-    Toro: {
+    listaTerneras: [],
+    Ternera: {
       id_Tbovinos: "",
       chapeta: "",
       id_tipo: "",
@@ -33,18 +33,18 @@ export default class Toros extends React.Component {
   }
   
   componentDidMount() {
-    this.listarToros();
+    this.listarTerneras();
     localStorage.setItem("edit", "");
   }
   
   
-  listarToros= () => {
+  listarTerneras= () => {
     axios
-        .get("http://vache-server.herokuapp.com/bovinos/tipo/2")
+        .get("http://vache-server.herokuapp.com/bovinos/tipo/6")
         .then(response => {
             console.log(response)
             this.setState({
-              listaToros: response.data.info
+              listaTerneras: response.data.info
             });
             console.log("Registro bovinos")
             console.log(this.state.control);
@@ -54,21 +54,21 @@ export default class Toros extends React.Component {
         });
   }
   
-  eliminarToros= async (chapeta) => {
+  eliminarTerneras= async (chapeta) => {
   const res = await axios.delete('http://vache-server.herokuapp.com/bovinos/' + chapeta);
   console.log(res);
-  this.listarToros();
+  this.listarTerneras();
   };
   
-  cargarInformacion = (Toro) => {
-    console.log("ESTE ES"+Toro);
-     localStorage.setItem("id_Tbovinos",Toro.id_Tbovinos);
-     localStorage.setItem("chapeta",Toro.chapeta);
-     localStorage.setItem("id_tipo",Toro.id_tipo);
-     localStorage.setItem("nombre",Toro.nombre);
-     localStorage.setItem("id_raza",Toro.id_raza);
-     localStorage.setItem("genetica",Toro.genetica);
-     localStorage.setItem("finca",Toro.finca);
+  cargarInformacion = (Ternera) => {
+    console.log("ESTE ES"+Ternera);
+     localStorage.setItem("id_Tbovinos",Ternera.id_Tbovinos);
+     localStorage.setItem("chapeta",Ternera.chapeta);
+     localStorage.setItem("id_tipo",Ternera.id_tipo);
+     localStorage.setItem("nombre",Ternera.nombre);
+     localStorage.setItem("id_raza",Ternera.id_raza);
+     localStorage.setItem("genetica",Ternera.genetica);
+     localStorage.setItem("finca",Ternera.finca);
      localStorage.setItem("edit","si");
   }
   
@@ -76,7 +76,7 @@ export default class Toros extends React.Component {
     var raza = "";
     return (
       <>
-        <TorosHeader />
+        <TernerasHeader />
         {/* Page content */}
         <Container className="mt--7" fluid>
         <Row>
@@ -94,22 +94,22 @@ export default class Toros extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                  {this.state.listaToros.map((Toro, i) => {
-                    if (Toro.id_raza == 1)
+                  {this.state.listaTerneras.map((Ternera, i) => {
+                    if (Ternera.id_raza == 1)
                     raza = "Jersey"
-                    else if (Toro.id_raza == 2)
+                    else if (Ternera.id_raza == 2)
                     raza = "Holstein"
-                    else if (Toro.id_raza == 3)
+                    else if (Ternera.id_raza == 3)
                     raza = "Jerhol"
-                    else if (Toro.id_raza == 4)
-                    raza = "PardoSuizo"
+                    else if (Ternera.id_raza == 4)
+                    raza = "PardoSuiza"
             return (
               <tr>
-                <td>{Toro.chapeta}</td>
-                <td>Toro</td>
-                <td>{Toro.nombre}</td>
+                <td>{Ternera.chapeta}</td>
+                <td>Ternera</td>
+                <td>{Ternera.nombre}</td>
                 <td>{raza}</td>
-                <td>{Toro.finca}</td>
+                <td>{Ternera.finca}</td>
                 <td className="text-right">
                         <UncontrolledDropdown>
                           <DropdownToggle
@@ -126,21 +126,20 @@ export default class Toros extends React.Component {
                         
                             <DropdownItem
                               href="/admin/actualizarBovino/"
-                              key={i} onClick={this.cargarInformacion.bind(this,Toro)} 
+                              key={i} onClick={this.cargarInformacion.bind(this,Ternera)} 
                             >
-                              <i className="ni ni-ui-04" />
+                                  <i className="ni ni-ui-04" />
                               Actualizar
                             </DropdownItem>
                             <DropdownItem
-                              href="#pablo"
-                              onClick={() => this.eliminarToros(Toro.chapeta)}
+                              onClick={() => this.eliminarTerneras(Ternera.chapeta)}
                             >
                                 <i className="ni ni-fat-remove" />
                              Eliminar
                             </DropdownItem>
                             <DropdownItem
                             href="/admin/verGenealogia/"
-                            key={i} onClick={this.cargarInformacion.bind(this,Toro)} 
+                            key={i} onClick={this.cargarInformacion.bind(this, Ternera)}
                             >
                             <i className="ni ni-map-big" />
                              Ver Genealogia 

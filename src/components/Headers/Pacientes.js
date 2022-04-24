@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import { Container, Row, Col, Button } from "reactstrap";
 
 
-import { Container, Row, Col } from "reactstrap";
-
-const produccion = () => {
+const TernerasDestetadas = () => {
   return (
     <>
       <div
@@ -12,7 +13,7 @@ const produccion = () => {
           minHeight: "300px",
           backgroundImage:
             "url(" +
-            require("../../assets/img/theme/lecherias.jpeg").default +
+            require("../../assets/img/theme/destetadas.jpeg").default +
             ")",
           backgroundSize: "cover",
           backgroundPosition: "center top",
@@ -24,10 +25,16 @@ const produccion = () => {
         <Container className="d-flex align-items-center" fluid>
           <Row>
             <Col lg="7" md="10">
-              <h1 className="display-2 text-white">Producción Lechera</h1>
-              <p className="text-white mt-0 mb-5">
-                Inventaree sus producciones lecheras 
-              </p>
+            <div className="text-left">
+                <Button
+                  className="btn-neutral btn-icon mr-2"
+                  color="info"
+                  to="/admin/inicio" tag={Link}
+                >
+                  <i className="ni ni-bold-left" />
+                </Button>
+              </div>
+              <h1 className="display-2 text-white">Terneras Destetadas</h1>
             </Col>
           </Row>
         </Container>
@@ -36,4 +43,4 @@ const produccion = () => {
   );
 };
 
-export default produccion;
+export default TernerasDestetadas;
